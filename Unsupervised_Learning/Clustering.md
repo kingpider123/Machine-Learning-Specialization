@@ -15,15 +15,15 @@ Algorithm Steps:
 3. Update centers based on assigned points
 
 4. Repeat until convergence
-![alt text](image-1.png)
+![alt text](img/image-1.png)
 
 k= k-1 (eliminate a cluster if there is no points assigned to it)
 
 # OPTIMIZATION OBJECTIVE
-![alt text](image-2.png)
+![alt text](img/image-2.png)
 
 # RANDOM INITIALIZATION
-![alt text](image-3.png)
+![alt text](img/image-3.png)
 
 Random initialize K-means at random training example.
 
@@ -32,4 +32,4 @@ Run the for loop to find the lowest cost function because some initialization wi
 Just pick the set of clusters that gave the lowest cost
 
 # CHOOSING THE VALUE K
-![alt text](image-4.png)
+![alt text](img/image-4.png)
