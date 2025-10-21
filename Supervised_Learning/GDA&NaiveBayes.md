@@ -60,3 +60,41 @@ This results in a **linear decision boundary** when the covariance matrices are 
 If we use different covariance matrices the **decision boundary is not linear** anymore
 
 # NAIVE BAYES
+## Naive Bayes Classifier Formula
+
+Given a feature vector \( x = (x_1, x_2, ..., x_n) \), the Naive Bayes classifier predicts the class label \( y \) using:
+
+
+
+$
+P(y \mid x) \propto P(y) \prod_{i=1}^{n} P(x_i \mid y)
+$
+
+
+
+###  Explanation:
+- $ P(y) $: Prior probability of class $ y $
+- $ P(x_i \mid y) $: Likelihood of feature $ x_i $ given class $ y $
+- Assumes **conditional independence**: each feature $ x_i $ is independent given the class label $ y $
+
+###  Prediction Rule:
+Choose the class $ y $ that maximizes the posterior:
+
+
+
+$
+\hat{y} = \arg\max_y \left[ P(y) \prod_{i=1}^{n} P(x_i \mid y) \right]
+$
+
+
+
+###  Laplace Smoothing (to avoid zero probabilities):
+
+
+$
+P(x_i \mid y) = \frac{\text{count}(x_i, y) + 1}{\text{count}(y) + k}
+$
+
+
+- $ k $: number of possible values for $ x_i $
+
