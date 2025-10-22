@@ -83,9 +83,24 @@ pair of observations in d-Dimension
 
 * We can find a good value for **d** with **Cross Validation**
 
+Function: $K(x, y) = (xᵀy + c)^d$
+
+Where:
+- `x` and `y` are input vectors
+- `xᵀy` is the dot product of `x` and `y`
+- `c` is a constant (often called the coefficient or bias term)
+- `d` is the degree of the polynomial
+
 ### Radial Kernel (Radial Basis Function- RBF Kernel)
 * Find SVCs in infinite dimensions
 
 * Behave like a **Weighted Nearest Neighbor** model where the closest observations (the nearest neighbors) have a lot of influence on how we classify the new observation
 
 * RBF Kernel uses the closes neighbors' classification for the new observation
+
+Function : $K(x, x′) = exp(−γ‖x − x′‖²)$
+
+Where:
+- `x` and `x′` are input vectors
+- `‖x − x′‖²` is the squared Euclidean distance between the vectors
+- `γ` (gamma) is a free parameter that controls the kernel’s sensitivity to distance
