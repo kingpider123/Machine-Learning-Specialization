@@ -20,13 +20,17 @@ Inference refers to the process of using a trained neural network to make predic
 ```
 loss = BinaryCrossEntropy()
 ```
+
+## Tanh: 
+$a = tanh(z) = (e^z - e^{-z}) / (e^z + e^{-z})$
 ## ReLU: Compared to Sigmoid, it’s computationally cheaper—no exponentials, just a simple threshold. And its outputs can ranged from 0 to any positive numbers.
     * ReLU outputs zero for negative inputs, introducing sparsity.
 
     * Sparse activations reduce interdependence between neurons, improving generalization and reducing overfitting
 
     * Empirical studies show ReLU often leads to faster training and better performance in deep networks compared to sigmoid.
-
+## Leaky ReLU:
+$a= max(0.01z,z)$
 # SOFTMAX ACTIVATION: used for multiclass classification 
 $$a_j = \frac{e^{z_j}}{ \sum_{k=1}^{N}{e^{z_k} }}$$
 ![alt text](img/image-5.png)
